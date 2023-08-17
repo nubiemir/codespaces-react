@@ -1,29 +1,32 @@
-import './App.css';
+import styled from "styled-components";
+import Button from "./Components/Button";
+import Row from "./Components/Row";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <Wrapper>
+      <Container>
+        <div>
+          <Button primary text="Add Row"  func={()=> console.log("HI")} />
+        </div>
+        <ul>
+          <li><Row/></li>
+        </ul>
+        
+      </Container>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+const Container = styled.div`
+  background: lightblue;
+  width: 60%;
+`
 
 export default App;
