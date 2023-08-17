@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Input = ({value, setValue}) => <InputText type= "text" value={value} onChange={setValue}/>;
+const Input = ({id, value, setValue}) => <InputText type= "number" value={value} onChange={(e)=>setValue(id, e.target.value)}/>;
 
 
 const InputText = styled.input`
